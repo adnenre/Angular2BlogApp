@@ -1,0 +1,22 @@
+
+<div class="list-group-item border-rounded"
+   [ngClass] =" {'bg-light-green' : postLoveIt > 0 , 
+                  'bg-light-red' : postLoveIt < 0 }"> 
+  
+    <div class="list-group-item-header">
+        <span class="post-title">{{ postTitle }}</span> <span class="post-date">{{ postDate | date :'d/M/yyyy h:mm a' }}</span> 
+    </div>  
+    <div class="list-group-item-body">
+        {{ postContent}}
+    </div>  
+    <div class="list-group-item-footer">
+        
+       <button class="btn btn-success rounded-circle" (click)="incLoveIt()"> <i class="fa fa-heart" ></i> </button>
+       <button class="btn btn-danger rounded-circle slash"  (click)="decLoveIt()"> <i class="fa fa-heart-o " ></i> </button>
+        <span class="love-it-result" >{{ postLoveIt }}</span>
+      </div>  
+      
+    
+
+</div>
+
