@@ -17,10 +17,10 @@ export class PostListItemComponentComponent implements OnInit {
   }
 
   incLoveIt(){
-    console.log('ready'+ ++this.postLoveIt);
+    return ++this.postLoveIt;
   }
   decLoveIt(){
-    console.log('ready'+ --this.postLoveIt);
+    return --this.postLoveIt;
   }
 
 }
